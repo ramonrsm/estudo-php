@@ -3,7 +3,20 @@
 
   $files = new files();
 
- 
+  try {
+
+    $path = 'texto.txt';
+    $contentFile = $files->contentFile($path);
+
+    if(empty($contentFile)) {
+      echo "Arquivo $path sem conteúdo.";   
+    } else {
+      echo "Arquivo: $path Conteúdo: $contentFile";
+    }
+
+  } catch (\Throwable $th) {
+    echo $th->getMessage();
+  }
 ?>
 
 <!DOCTYPE html>

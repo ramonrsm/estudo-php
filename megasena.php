@@ -85,7 +85,6 @@ function PalpiteDaMegaSena()
                                 $style = '';
 
                                 if (in_array($linha, $palpites[$i]) && in_array($linha, $sorteio)) $style = "<td style='background-color: #0000FF; color: #FFF'";
-                                else $style = '';
 
                                 echo "<td $style>$linha</td>";
                             }
